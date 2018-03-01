@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Delamar](https://up.htmlacademy.ru/htmlcss/20/user/504425).
-* Наставник: `Неизвестно`.
+* Наставник: [Софья Лапшина](https://up.htmlacademy.ru/htmlcss/20/user/139041).
 
 ---
 
