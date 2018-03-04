@@ -5,14 +5,14 @@
   <title>HTML Academy: Седона</title>
 </head>
 <body>
-<header class="main-header">
-  <nav class="main-header_navigation">
-    <a href="#" class="main-header_logo"><img src="http://placehold.it/138x70" alt="logo"></a>
-    <ul class="main-header_menu">
+<header class="main_header">
+  <nav class="main_navigation">
+    <a href="index.html" class="main_header-logo"><img src="http://placehold.it/150x100" alt="logo"></a>
+    <ul class="main_header-menu">
       <li><a href="#">Информация</a></li>
       <li><a href="#">Фото и видео</a></li>
       <li><a href="#">Карта штата</a></li>
-      <li><a href="catalog.html">Гостиницы</a></li>
+      <li><a>Гостиницы</a></li>
     </ul>
   </nav>
 </header>
@@ -23,17 +23,16 @@
   <div class="content">
     <h1 class="visually-hidden">Добро пожаловать в Седону!</h1>
     <b>Седона-небольшой городок в Аризоне,заслуживающий большего!</b>
-    <h2>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</h2>
-    <section class="reasons">
-      <div class="reason_one">
+    <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+    <div class="reasons">
+      <section class="reasons-item--1">
         <h3>Настоящий городок</h3>
         <span>— №1 —</span>
         <p>Седона — не аттракцион для туристов</p>
         <img src="http://placehold.it/800x400" alt="house">
-      </div>
-
+      </section>
       <section class="advice">
-        <ul class="advise-list">
+        <ul class="advice-list">
           <li><b>Жилье</b>
             <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p></li>
           <li><b>Еда</b>
@@ -42,44 +41,47 @@
             <p>Не только китайского, но и местного производства</p></li>
         </ul>
       </section>
-      <div class="reason_two">
+      <section class="reasons-item--2">
         <h3>Там есть мост дьявола</h3>
         <span>— №2 —</span>
         <p>Да,по нему можно пройти!Если Вы конечно осмелитесь</p>
         <img src="http://placehold.it/800x400" alt="devil's bridge">
-      </div>
-      <div class="reason_three"><h3>Небольшая площадь</h3>
-        <span>— №3 —</span>
-        <p>Все достопримечательности находятся очень близко</p>
-      </div>
-      <div class="reason_four"><h3>Красивая дорога</h3>
-        <span>— №4 —</span>
-        <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
-      </div>
-      <div class="reason_five"><h3>Мало туристов</h3>
-        <span>— №5 —</span>
-        <p>Большинство едет в Гранд Каньон и толпится там</p>
-      </div>
-    </section>
-    <div class="map">
-      <!-- Где то тут будет карта-->
+      </section>
+      <section>
+        <div class="reasons-item--3"><h3>Небольшая площадь</h3>
+          <span>— №3 —</span>
+          <p>Все достопримечательности находятся очень близко</p>
+        </div>
+        <div class="reasons-item--4"><h3>Красивая дорога</h3>
+          <span>— №4 —</span>
+          <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+        </div>
+        <div class="reasons-item--5"><h3>Мало туристов</h3>
+          <span>— №5 —</span>
+          <p>Большинство едет в Гранд Каньон и толпится там</p>
+        </div>
+      </section>
     </div>
-    <section class="search-hotels">
+    <section class="search_hotels">
       <h2>Заинтересовались?</h2>
       <p>Укажите предполагаемые даты поездки, и мы покажем Вам лучшие предложения гостиниц в Седоне</p>
       <p>Поиск гостиницы в Седоне</p>
       <!-- Где то тут будет форма -->
     </section>
+    <div class="map">
+      <!-- Где то тут будет карта-->
+    </div>
+  </div>
 </main>
-<footer class="main-footer">
-  <a href="#">visitsedona</a>
-  <ul class="main-footer_social">
+<footer class="main_footer">
+  <a href="#">#visitsedona</a>
+  <ul class="main_footer-social">
     <li><a class="social-button" href="#">twitter</a></li>
     <li><a class="social-button" href="#">facebook</a></li>
     <li><a class="social-button" href="#">youtube</a></li>
   </ul>
-  <div class="design-by">
-    <p>website</p>
+  <div class="design">
+    <p>Website by</p>
     <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="http://placehold.it/150x100" alt="HTML Academy"></a>
   </div>
 </footer>
