@@ -27,7 +27,7 @@
   </nav>
 </header>
 <main class="container">
-  <section class="intro" style="background-color: coral"> <!-- Бек сделал, что бы было видно, что надпись норм-->
+  <section class="intro">
     <img src="img/welcome.png" width="458" height="352" alt="Welcome Sedona">
     <h1 class="visually-hidden">Добро пожаловать в Седону!</h1>
   </section>
@@ -83,8 +83,27 @@
   <section class="search-hotels">
     <p>Заинтересовались?</p>
     <p>Укажите предполагаемые даты поездки, и мы покажем Вам лучшие предложения гостиниц в Седоне</p>
-    <button>Поиск гостиницы в Седоне</button>
-    <!-- Где то тут будет форма -->
+    <button type="button" class="btn">Поиск гостиницы в Седоне</button>
+    <form method="post" action="https://echo.htmlacademy.ru/">
+      <label for="arrival">Дата заезда:</label>
+      <input type="text" name="arrival" id="arrival" value="24 Апреля 2017">
+      <button type="button" class="btn" aria-label="Arrival date">
+        <img src="img/icons/calendar.svg" alt="Arrival date">
+      </button>
+      <label for="departure">Дата выезда:</label>
+      <input type="text" name="departure" id="departure">
+      <button type="button" class="btn" aria-label="Departure date">
+        <img src="img/icons/calendar.svg" alt="Departure date">
+      </button>
+      <label for="adults">Взрослые:</label>
+      <span tabindex="0">+</span>
+      <input type="text" name="adults" id="adults">
+      <span tabindex="0">-</span>
+      <label for="children">Дети:</label>
+      <span tabindex="0">+</span>
+      <input type="text" name="children" id="children">
+      <span tabindex="0">-</span>
+      <button type="submit" class="btn">Найти</button>
   </section>
   <div class="map">
     <img src="img/backgrounds/map.jpg" width="1200" height="593" alt="Map">

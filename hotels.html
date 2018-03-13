@@ -29,18 +29,71 @@
 <main class="container">
   <h1 class="visually-hidden">Поиск гостиниц Седоны</h1>
   <section class="hotels-filter">
-    <!-- Где то тут форма фильтра -->
+    <form method="post" action="http://echo.htmlacademy.ru">
+      <fieldset>
+        <legend>Инфраструктура:</legend>
+        <ul>
+          <li>
+            <input type="checkbox" id="pool" name="pool" checked>
+            <label for="pool">Бассейн</label>
+          </li>
+          <li>
+            <input type="checkbox" id="parking" name="parking">
+            <label for="parking">Парковка</label>
+          </li>
+          <li>
+            <input type="checkbox" id="wi-fi" name="wi-fi">
+            <label for="wi-fi">Wi-Fi</label>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset>
+        <legend>Тип жилья:</legend>
+        <ul>
+          <li>
+            <input type="checkbox" id="hotel" name="hotel" checked>
+            <label for="hotel">Гостиница</label>
+          </li>
+          <li>
+            <input type="checkbox" id="motel" name="motel" checked>
+            <label for="motel">Мотель</label>
+          </li>
+          <li>
+            <input type="checkbox" id="apartments" name="apartments" checked>
+            <label for="apartments">Апартаменты</label>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset>
+        <legend>Стоимость в сутки (P):</legend>
+        <div>
+          <span>
+            <label for="start-price">От</label>
+            <input type="text" id="start-price" value="0">
+          </span>
+          <span>
+            <label for="end-price">До</label>
+            <input name="end-price" id="end-price" value="3000">
+          </span>
+        </div>
+        <label for="price-start"></label>
+        <input type="range" name="price-start" id="price-start" min="0" max="3000" step="100">
+        <label for="price-end"></label>
+        <input type="range" name="price-end" id="price-end" min="0" max="3000" step="100">
+        <button type="submit" class="btn">Показать</button>
+      </fieldset>
+    </form>
   </section>
   <div class="hotel-sorting">
     <p>Найдено:3</p>
     <p>Сортировка:</p>
     <ul class="hotel-sorting_filter">
-      <li class="hotel-sorting_current">По цене</li>
-      <li>По типу</li>
-      <li>По рейтинку</li>
+      <li class="hotel-sorting_current" tabindex="0">По цене</li>
+      <li tabindex="0">По типу</li>
+      <li tabindex="0">По рейтинку</li>
     </ul>
-    <span>Arrow</span>
-    <span>Arrow</span>
+    <a href="#" aria-label="Sort by A-Z">Arrow</a>
+    <a href="#" aria-label="Sort by Z-A">Arrow</a>
   </div>
   <section class="hotels">
     <article class="hotels_item">
@@ -49,17 +102,17 @@
       <p>Гостиница</p>
       <span class="hotels_price">от 4000 р.</span>
       <a href="#" class="hotels_detail">Подробнее</a>
-      <button>Забронировать</button>
+      <button type="button" class="btn">Забронировать</button>
       <span class="stars">Stars</span>
       <span class="hotels_rating">Рейтинг: 8,5</span>
     </article>
     <article class="hotels_item">
-      <img src="img/hotels" width="135" height="90" alt="Desert Quail">
+      <img src="img/hotels/desert.jpg" width="135" height="90" alt="Desert Quail">
       <h2>Desert Quail Inn</h2>
       <p>Мотель</p>
       <span class="hotels_price">от 3000 р.</span>
       <a href="#" class="hotels_detail">Подробнее</a>
-      <button>Забронировать</button>
+      <button type="button" class="btn">Забронировать</button>
       <span class="stars">Stars</span>
       <span class="hotels_rating">Рейтинг: 8,9</span>
     </article>
@@ -69,7 +122,7 @@
       <p>Апартаменты</p>
       <span class="hotels_price">от 2000 р.</span>
       <a href="#" class="hotels_detail">Подробнее</a>
-      <button>Забронировать</button>
+      <button type="button" class="btn">Забронировать</button>
       <span class="stars">Stars</span>
       <span class="hotels_rating">Рейтинг: 9,2</span>
     </article>
