@@ -12,7 +12,7 @@
   <header class="main-header">
     <nav class="main-navigation">
       <a class="main-header_logo">
-        <img src="img/logotype/logo.png" width="138" height="70" alt="Sedona">
+        <img src="img/logotype/logo.png" width="138" height="70" alt="Седона">
       </a>
       <ul class="main-header_menu">
         <li>
@@ -32,7 +32,7 @@
   </header>
   <main>
     <section class="intro">
-      <img src="img/welcome.png" width="458" height="352" alt="Welcome Sedona">
+      <img src="img/welcome.png" width="458" height="352" alt="Добро пожаловать в Седону">
       <h1 class="visually-hidden">Добро пожаловать в Седону!</h1>
     </section>
     <section class="features">
@@ -42,7 +42,7 @@
         <h3>Настоящий городок</h3>
         <span>№1</span>
         <p>Седона — не аттракцион для туристов</p>
-        <img src="img/house.jpg" width="800" height="401" alt="House">
+        <img src="img/house.jpg" width="800" height="401" alt="Домик в Седоне">
       </section>
       <section class="advice">
         <ul class="advice_list">
@@ -64,7 +64,7 @@
         <h3>Там есть мост дьявола</h3>
         <span>№2</span>
         <p>Да,по нему можно пройти!Если Вы конечно осмелитесь</p>
-        <img src="img/devils_bridge.jpg" width="800" height="400" alt="Devil's Bridge">
+        <img src="img/devils_bridge.jpg" width="800" height="400" alt="Мост Дьявола">
       </section>
       <section>
         <div class="features_item">
@@ -89,29 +89,45 @@
       <p>Укажите предполагаемые даты поездки, и мы покажем Вам лучшие предложения гостиниц в Седоне</p>
       <button type="button" class="btn">Поиск гостиницы в Седоне</button>
       <form method="post" action="https://echo.htmlacademy.ru/">
-        <label for="arrival">Дата заезда:</label>
-        <input type="text" name="arrival" id="arrival" value="24 Апреля 2017">
-        <button type="button" class="btn" aria-label="Arrival date">
-          <img src="img/icons/calendar.svg" alt="Arrival date">
-        </button>
-        <label for="departure">Дата выезда:</label>
-        <input type="text" name="departure" id="departure">
-        <button type="button" class="btn" aria-label="Departure date">
-          <img src="img/icons/calendar.svg" alt="Departure date">
-        </button>
-        <label for="adults">Взрослые:</label>
-        <span tabindex="0">+</span>
-        <input type="text" name="adults" id="adults">
-        <span tabindex="0">-</span>
-        <label for="children">Дети:</label>
-        <span tabindex="0">+</span>
-        <input type="text" name="children" id="children">
-        <span tabindex="0">-</span>
+        <div>
+          <label for="search-arrival">Дата заезда:</label>
+          <input type="text" name="search-arrival" id="search-arrival" value="24 Апреля 2017">
+          <button type="button" class="btn" aria-label="Выбор даты заезда">
+            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="22">
+              <path d="M19.251 2.025h-2.845V.648c0-.381-.294-.689-.656-.689-.363 0-.656.308-.656.689v1.377h-3.938V.648c0-.381-.294-.689-.655-.689-.363 0-.657.308-.657.689v1.377H5.906V.648c0-.381-.294-.689-.656-.689-.363 0-.657.308-.657.689v1.377H1.75C.784 2.025 0 2.847 0 3.862v16.302C0 21.179.784 22 1.75 22h17.501c.966 0 1.749-.821 1.749-1.836V3.862c0-1.015-.783-1.837-1.749-1.837zm.437 18.139c0 .253-.195.459-.437.459H1.75c-.241 0-.438-.206-.438-.459V3.862c0-.253.196-.459.438-.459h2.844v1.378c0 .381.294.689.657.689.362 0 .656-.308.656-.689V3.403h3.938v1.378c0 .381.294.689.657.689.361 0 .655-.308.655-.689V3.403h3.938v1.378c0 .381.293.689.656.689.362 0 .656-.308.656-.689V3.403h2.845c.241 0 .437.206.437.459v16.302z"/>
+              <path d="M4.594 8.225h2.625v2.066H4.594zM4.594 11.668h2.625v2.067H4.594zM4.594 15.112h2.625v2.066H4.594zM9.188 15.112h2.625v2.066H9.188zM9.188 11.668h2.625v2.067H9.188zM9.188 8.225h2.625v2.066H9.188zM13.781 15.112h2.625v2.066h-2.625zM13.781 11.668h2.625v2.067h-2.625zM13.781 8.225h2.625v2.066h-2.625z"/>
+            </svg>
+          </button>
+        </div>
+        <div>
+          <label for="search-departure">Дата выезда:</label>
+          <input type="text" name="search-departure" id="search-departure">
+          <button type="button" class="btn" aria-label="Выбор даты выезда">
+            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="22">
+              <path d="M19.251 2.025h-2.845V.648c0-.381-.294-.689-.656-.689-.363 0-.656.308-.656.689v1.377h-3.938V.648c0-.381-.294-.689-.655-.689-.363 0-.657.308-.657.689v1.377H5.906V.648c0-.381-.294-.689-.656-.689-.363 0-.657.308-.657.689v1.377H1.75C.784 2.025 0 2.847 0 3.862v16.302C0 21.179.784 22 1.75 22h17.501c.966 0 1.749-.821 1.749-1.836V3.862c0-1.015-.783-1.837-1.749-1.837zm.437 18.139c0 .253-.195.459-.437.459H1.75c-.241 0-.438-.206-.438-.459V3.862c0-.253.196-.459.438-.459h2.844v1.378c0 .381.294.689.657.689.362 0 .656-.308.656-.689V3.403h3.938v1.378c0 .381.294.689.657.689.361 0 .655-.308.655-.689V3.403h3.938v1.378c0 .381.293.689.656.689.362 0 .656-.308.656-.689V3.403h2.845c.241 0 .437.206.437.459v16.302z"/>
+              <path d="M4.594 8.225h2.625v2.066H4.594zM4.594 11.668h2.625v2.067H4.594zM4.594 15.112h2.625v2.066H4.594zM9.188 15.112h2.625v2.066H9.188zM9.188 11.668h2.625v2.067H9.188zM9.188 8.225h2.625v2.066H9.188zM13.781 15.112h2.625v2.066h-2.625zM13.781 11.668h2.625v2.067h-2.625zM13.781 8.225h2.625v2.066h-2.625z"/>
+            </svg>
+          </button>
+        </div>
+        <div>
+          <div>
+            <label for="search-adults">Взрослые:</label>
+            <button aria-label="Увеличить колличество взрослых">+</button>
+            <input type="text" name="search-adults" id="search-adults">
+            <button aria-label="Уменьшить колличество взрослых">-</button>
+          </div>
+          <div>
+            <label for="search-children">Дети:</label>
+            <button aria-label="Увеличить колличество детей">+</button>
+            <input type="text" name="search-children" id="search-children">
+            <button aria-label="Уменьшить колличество детей">-</button>
+          </div>
+        </div>
         <button type="submit" class="btn">Найти</button>
       </form>
     </section>
     <div class="map">
-      <img src="img/backgrounds/map.jpg" width="1200" height="593" alt="Map">
+      <img src="img/backgrounds/map.jpg" width="1200" height="593" alt="Карта Седоны">
     </div>
   </main>
   <footer class="main-footer">
