@@ -21,6 +21,16 @@ a {
   margin: 0 auto;
 }
 
+.red-button {
+  background-color: #766357;
+  color: #ffffff;
+}
+
+.blue-button {
+  background-color: #81b3d2;
+  color: #ffffff;
+}
+
 .main-header_menu {
   list-style: none;
 }
@@ -60,4 +70,20 @@ a {
 
 .features ul {
   list-style: none;
+}
+
+.search-hotels {
+  text-align: center;
+}
+
+.main-footer a {
+  color: #000000;
+}
+
+.main-footer_social-list {
+  list-style: none;
+}
+
+.main-footer_social-list a {
+  background-color: #81b3d2;
 }
