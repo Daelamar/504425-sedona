@@ -1,3 +1,11 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -40,10 +48,6 @@ a {
   font-weight: 700;
 }
 
-.main-header_menu .current-page {
-  color: #766357;
-}
-
 .main-navigation {
   text-align: center;
 }
@@ -72,18 +76,87 @@ a {
   list-style: none;
 }
 
+section.features_item {
+  background-color: #81b3d2;
+}
+
+div.features_item {
+  background-color: #eeeeee;
+}
+
 .search-hotels {
   text-align: center;
 }
 
-.main-footer a {
-  color: #000000;
+.search-hotels > p:first-of-type {
+  font-size: 30px;
+  font-weight: 700;
 }
 
-.main-footer_social-list {
+.main-footer a {
+  color: #000000;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.main-footer_social-list li {
   list-style: none;
 }
 
 .main-footer_social-list a {
   background-color: #81b3d2;
+}
+
+/* Страница отелей*/
+.main-header_menu .current-page {
+  color: #766357;
+}
+
+.hotels-filter {
+  color: #ffffff;
+  background-color: #7a9cc0;
+  background-image: url("../img/backgrounds/background-filter.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+;
+}
+.hotels-filter legend {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.hotel-sorting > p:first-of-type {
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.hotel-sorting_filter {
+  font-size: 12px;
+}
+
+.hotel-sorting_filter li {
+  list-style: none;
+}
+
+.hotel-sorting_filter a {
+  color: #000000;
+  opacity: 0.4;
+  border-bottom: 1px dotted #81b3d2;
+}
+
+.hotel-sorting_filter li:first-child a {
+  color: #81b3d2;
+  opacity: 1;
+  border-bottom: none;
+}
+
+.hotels h2 {
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.hotels_rating {
+  background-color: #f2f2f2;
 }
