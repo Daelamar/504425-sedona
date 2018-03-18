@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>Гостиницы</title>
-  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="css/normalize.css"/>
   <link rel="stylesheet" href="css/style.css"/>
 </head>
@@ -30,7 +30,7 @@
       </ul>
     </nav>
   </header>
-  <main class="container">
+  <main>
     <h1 class="visually-hidden">Поиск гостиниц Седоны</h1>
     <section class="hotels-filter">
       <form method="post" action="http://echo.htmlacademy.ru">
@@ -68,7 +68,7 @@
             </li>
           </ul>
         </fieldset>
-        <fieldset>
+        <fieldset class="cost-per-day">
           <legend>Стоимость в сутки (P):</legend>
           <div>
           <span>
@@ -86,15 +86,15 @@
             <span tabindex="0" aria-label="Максимальная цена"></span>
           </div>
         </fieldset>
-        <button type="submit" class="btn">Показать</button>
+        <button type="submit" class="btn hotels-filter_show">Показать</button>
       </form>
     </section>
     <div class="hotel-sorting">
-      <p>Найдено:3</p>
-      <p>Сортировка:</p>
+      <p class="hotel-sorting_title">Найдено:3</p>
+      <p class="hotel-sorting_title-sort">Сортировка:</p>
       <ul class="hotel-sorting_filter">
         <li class="hotel-sorting_current">
-          <a href="#">По цене</a>
+          <a href="#" >По цене</a>
         </li>
         <li>
           <a href="#">По типу</a>
@@ -103,44 +103,54 @@
           <a href="#">По рейтинку</a>
         </li>
       </ul>
-      <a href="#" aria-label="Сортировка по возрастанию"></a>
-      <a href="#" aria-label="Сортировка по убыванию"></a>
+      <div class="hotel-sorting_arrow-block">
+        <a href="#" aria-label="Сортировка по возрастанию">
+          <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" fill="#cacaca">
+            <path d="M5.5 0L0 10h11z"/>
+          </svg>
+        </a>
+        <a href="#" class="arrow-block_current-arrow" aria-label="Сортировка по убыванию">
+          <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" fill="#81b3d2">
+            <path d="M5.5 10L0 0h11"/>
+          </svg>
+        </a>
+      </div>
     </div>
     <section class="hotels">
       <article class="hotels_item">
         <img src="img/hotels/amara.jpg" width="135" height="90" alt="Отель Amara Resort">
-        <h2>Amara Resort&amp;Spa</h2>
+        <a href="#"><h2 class="item_hotel-name">Amara Resort&amp;Spa</h2></a>
         <p>Гостиница</p>
         <span class="hotels_price">от 4000 р.</span>
-        <a href="#" class="blue-button">Подробнее</a>
-        <a href="#" class="red-button">Забронировать</a>
+        <a href="#" class="btn detail-button">Подробнее</a>
+        <a href="#" class="btn reserv-button">Забронировать</a>
         <span class="stars">Stars</span>
         <span class="hotels_rating">Рейтинг: 8,5</span>
       </article>
       <article class="hotels_item">
         <img src="img/hotels/desert.jpg" width="135" height="90" alt="Мотель Desert Quail">
-        <h2>Desert Quail Inn</h2>
+        <a href="#"><h2 class="item_hotel-name">Desert Quail Inn</h2></a>
         <p>Мотель</p>
         <span class="hotels_price">от 3000 р.</span>
-        <a href="#" class="blue-button">Подробнее</a>
-        <a href="#" class="red-button">Забронировать</a>
+        <a href="#" class=" btn detail-button">Подробнее</a>
+        <a href="#" class=" btn reserv-button">Забронировать</a>
         <span class="stars">Stars</span>
         <span class="hotels_rating">Рейтинг: 8,9</span>
       </article>
       <article class="hotels_item">
         <img src="img/hotels/villas.jpg" width="135" height="90" alt="Апартаменты Villas At Poco">
-        <h2>Villas At Poco Diablo</h2>
+        <a href="#"><h2 class="item_hotel-name">Villas At Poco Diablo</h2></a>
         <p>Апартаменты</p>
         <span class="hotels_price">от 2000 р.</span>
-        <a href="#" class="blue-button">Подробнее</a>
-        <a href="#" class="red-button">Забронировать</a>
+        <a href="#" class="btn detail-button">Подробнее</a>
+        <a href="#" class="btn reserv-button">Забронировать</a>
         <span class="stars">Stars</span>
         <span class="hotels_rating">Рейтинг: 9,2</span>
       </article>
     </section>
   </main>
   <footer class="main-footer">
-    <a href="#">#visitsedona</a>
+    <a href="#" class="visitsedona-link">#visitsedona</a>
     <ul class="main-footer_social-list">
       <li>
         <a class="social-button" href="#">twitter</a>

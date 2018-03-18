@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
-  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="css/normalize.css"/>
   <link rel="stylesheet" href="css/style.css"/>
 </head>
@@ -36,9 +36,9 @@
       <h1 class="visually-hidden">Добро пожаловать в Седону!</h1>
     </section>
     <section class="features">
-      <p>Седона-небольшой городок в Аризоне,заслуживающий большего!</p>
-      <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
-      <section class="features_item">
+      <p class="features_slogan">Седона — небольшой городок в Аризоне,заслуживающий большего!</p>
+      <p class="features_reasons">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+      <section class="features_item main-item">
         <h3>Настоящий городок</h3>
         <span>№1</span>
         <p>Седона — не аттракцион для туристов</p>
@@ -60,24 +60,24 @@
           </li>
         </ul>
       </section>
-      <section class="features_item">
+      <section class="features_item main-item">
         <h3>Там есть мост дьявола</h3>
         <span>№2</span>
         <p>Да,по нему можно пройти!Если Вы конечно осмелитесь</p>
         <img src="img/devils_bridge.jpg" width="800" height="400" alt="Мост Дьявола">
       </section>
       <section>
-        <div class="features_item">
+        <div class="features_item secondary-item">
           <h3>Небольшая площадь</h3>
           <span>№3</span>
           <p>Все достопримечательности находятся очень близко</p>
         </div>
-        <div class="features_item">
+        <div class="features_item secondary-item">
           <h3>Красивая дорога</h3>
           <span>№4</span>
           <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
         </div>
-        <div class="features_item">
+        <div class="features_item secondary-item">
           <h3>Мало туристов</h3>
           <span>№5</span>
           <p>Большинство едет в Гранд Каньон и толпится там</p>
@@ -85,15 +85,15 @@
       </section>
     </section>
     <section class="search-hotels">
-      <p>Заинтересовались?</p>
+      <p class="search-hotels_interest">Заинтересовались?</p>
       <p>Укажите предполагаемые даты поездки, и мы покажем Вам лучшие предложения гостиниц в Седоне</p>
-      <button type="button" class="red-button open-form">Поиск гостиницы в Седоне</button>
+      <button type="button" class="search-hotels_open-form btn">Поиск гостиницы в Седоне</button>
       <form method="post" action="https://echo.htmlacademy.ru/">
         <div>
           <label for="search-arrival">Дата заезда:</label>
           <input type="text" name="search-arrival" id="search-arrival" value="24 Апреля 2017">
           <button type="button" class="btn" aria-label="Выбор даты заезда">
-            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="22">
+            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" fill="#cacaca">
               <path d="M19.251 2.025h-2.845V.648c0-.381-.294-.689-.656-.689-.363 0-.656.308-.656.689v1.377h-3.938V.648c0-.381-.294-.689-.655-.689-.363 0-.657.308-.657.689v1.377H5.906V.648c0-.381-.294-.689-.656-.689-.363 0-.657.308-.657.689v1.377H1.75C.784 2.025 0 2.847 0 3.862v16.302C0 21.179.784 22 1.75 22h17.501c.966 0 1.749-.821 1.749-1.836V3.862c0-1.015-.783-1.837-1.749-1.837zm.437 18.139c0 .253-.195.459-.437.459H1.75c-.241 0-.438-.206-.438-.459V3.862c0-.253.196-.459.438-.459h2.844v1.378c0 .381.294.689.657.689.362 0 .656-.308.656-.689V3.403h3.938v1.378c0 .381.294.689.657.689.361 0 .655-.308.655-.689V3.403h3.938v1.378c0 .381.293.689.656.689.362 0 .656-.308.656-.689V3.403h2.845c.241 0 .437.206.437.459v16.302z"/>
               <path d="M4.594 8.225h2.625v2.066H4.594zM4.594 11.668h2.625v2.067H4.594zM4.594 15.112h2.625v2.066H4.594zM9.188 15.112h2.625v2.066H9.188zM9.188 11.668h2.625v2.067H9.188zM9.188 8.225h2.625v2.066H9.188zM13.781 15.112h2.625v2.066h-2.625zM13.781 11.668h2.625v2.067h-2.625zM13.781 8.225h2.625v2.066h-2.625z"/>
             </svg>
@@ -103,7 +103,7 @@
           <label for="search-departure">Дата выезда:</label>
           <input type="text" name="search-departure" id="search-departure">
           <button type="button" class="btn" aria-label="Выбор даты выезда">
-            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="22">
+            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" fill="#cacaca">
               <path d="M19.251 2.025h-2.845V.648c0-.381-.294-.689-.656-.689-.363 0-.656.308-.656.689v1.377h-3.938V.648c0-.381-.294-.689-.655-.689-.363 0-.657.308-.657.689v1.377H5.906V.648c0-.381-.294-.689-.656-.689-.363 0-.657.308-.657.689v1.377H1.75C.784 2.025 0 2.847 0 3.862v16.302C0 21.179.784 22 1.75 22h17.501c.966 0 1.749-.821 1.749-1.836V3.862c0-1.015-.783-1.837-1.749-1.837zm.437 18.139c0 .253-.195.459-.437.459H1.75c-.241 0-.438-.206-.438-.459V3.862c0-.253.196-.459.438-.459h2.844v1.378c0 .381.294.689.657.689.362 0 .656-.308.656-.689V3.403h3.938v1.378c0 .381.294.689.657.689.361 0 .655-.308.655-.689V3.403h3.938v1.378c0 .381.293.689.656.689.362 0 .656-.308.656-.689V3.403h2.845c.241 0 .437.206.437.459v16.302z"/>
               <path d="M4.594 8.225h2.625v2.066H4.594zM4.594 11.668h2.625v2.067H4.594zM4.594 15.112h2.625v2.066H4.594zM9.188 15.112h2.625v2.066H9.188zM9.188 11.668h2.625v2.067H9.188zM9.188 8.225h2.625v2.066H9.188zM13.781 15.112h2.625v2.066h-2.625zM13.781 11.668h2.625v2.067h-2.625zM13.781 8.225h2.625v2.066h-2.625z"/>
             </svg>
@@ -112,18 +112,18 @@
         <div>
           <div>
             <label for="search-adults">Взрослые:</label>
-            <button aria-label="Увеличить колличество взрослых">+</button>
+            <button type="button" class="plus btn" aria-label="Увеличить колличество взрослых">+</button>
             <input type="text" name="search-adults" id="search-adults">
-            <button aria-label="Уменьшить колличество взрослых">-</button>
+            <button type="button" class="minus btn" aria-label="Уменьшить колличество взрослых">-</button>
           </div>
           <div>
             <label for="search-children">Дети:</label>
-            <button aria-label="Увеличить колличество детей">+</button>
+            <button type="button" class="plus btn" aria-label="Увеличить колличество детей">+</button>
             <input type="text" name="search-children" id="search-children">
-            <button aria-label="Уменьшить колличество детей">-</button>
+            <button type="button" class="minus btn" aria-label="Уменьшить колличество детей">-</button>
           </div>
         </div>
-        <button type="submit" class="btn blue-button">Найти</button>
+        <button type="submit" class="btn search-hotels_find">Найти</button>
       </form>
     </section>
     <div class="map">
@@ -131,7 +131,7 @@
     </div>
   </main>
   <footer class="main-footer">
-    <a href="#">#visitsedona</a>
+    <a href="#" class="visitsedona-link">#visitsedona</a>
     <ul class="main-footer_social-list">
       <li>
         <a class="social-button" href="#">twitter</a>
