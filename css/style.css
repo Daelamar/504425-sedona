@@ -25,23 +25,31 @@ a {
 }
 
 .container {
-  max-width: 1200px;
   margin: 0 auto;
+  width: 1200px;
+
   background-color: #ffffff;
-  box-shadow: 0 0 7px 3px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
 }
 
 .btn {
   font-family: inherit;
-  font-size: 14px;
-  line-height: 21px;
   font-weight: 700;
   color: #ffffff;
   text-transform: uppercase;
-  background-color: transparent;
 
   border: none;
-  outline: none;
 }
 
 .main-header ul {
@@ -50,12 +58,14 @@ a {
 
 .main-header_menu .current-page {
   color: #766357;
+  cursor: pointer;
 }
 
 .main-header_menu a {
   line-height: 26px;
-  color: #000000;
   font-weight: 700;
+  color: #000000;
+
 }
 
 .main-header_menu a:hover {
@@ -68,16 +78,14 @@ a {
 }
 
 .intro {
-  background-color: #e3f1f9;
-  background-image: url("../img/backgrounds/background.jpg");
-  background-repeat: no-repeat;
+  background: #81b3d2 url("../img/backgrounds/background.jpg") no-repeat;
   background-size: cover;
 }
 
 .features_slogan {
   font-size: 21px;
-  font-weight: 700;
   line-height: 26px;
+  font-weight: 700;
 }
 
 .features_reasons {
@@ -88,7 +96,7 @@ a {
   list-style: none;
 }
 
-.features .advice h4,
+.advice h4,
 .features h3 {
   font-size: 21px;
   line-height: 21px;
@@ -96,11 +104,11 @@ a {
 }
 
 .main-item {
-  background-color: #81b3d2;
   color: #ffffff;
+  background-color: #81b3d2;
 }
 
-.secondary-item {
+.features_secondary {
   background-color: #eeeeee;
 }
 
@@ -114,8 +122,12 @@ a {
 
 .search-hotels_interest {
   font-size: 30px;
-  font-weight: 700;
   line-height: 36px;
+  font-weight: 700;
+}
+
+.calendar {
+  background-color: transparent; /* Я не задал фон календарику, так как мы его по идее будем в инпут позиционировать абсолютом*/
 }
 
 .plus,
@@ -124,18 +136,24 @@ a {
   background-color: #f2f2f2;
 }
 
+.search-hotels label {
+  font-weight: 700;
+}
+
 .search-hotels input {
-  border: none;
+  font-weight: 700;
+  border: 2px solid #f2f2f2;
   outline: none;
 }
 
 .search-hotels input:hover {
   background-color: #ebebeb;
+  border: 2px solid #ebebeb;
 }
 
 .search-hotels input:focus {
   background-color: #ffffff;
-  outline: 2px solid #e5e5e5;
+  border: 2px solid #e5e5e5;
 }
 
 .search-hotels_open-form {
@@ -149,8 +167,9 @@ a {
 }
 
 .search-hotels_open-form:active {
-  background-color: #503e33;
   color: rgba(255, 255, 255, 0.3);
+  background-color: #503e33;
+  outline: none;
 }
 
 .search-hotels svg:hover {
@@ -159,6 +178,7 @@ a {
 
 .search-hotels svg:active {
   fill: #81b3d2;
+  outline: none;
 }
 
 .search-hotels_find {
@@ -172,33 +192,43 @@ a {
 }
 
 .search-hotels_find:active {
-  background-color: #5496bd;
   color: rgba(255, 255, 255, 0.3);
+  background-color: #5496bd;
+  outline: none;
 }
 
 .visitsedona-link {
-  color: #000000;
   font-size: 21px;
-  font-weight: 700;
   line-height: 26px;
+  font-weight: 700;
+  color: #000000;
 }
 
 .main-footer ul {
   list-style: none;
 }
 
-.main-footer_social-list a {
+.social-button {
   background-color: #81b3d2;
+}
+
+.social-button svg:hover,
+.social-button:hover
+{
+  background-color: #669ec0;
+}
+
+.social-button svg:active,
+.social-button:active {
+  fill: #88b6d1;
+  background-color: #5496bd;
 }
 
 /* Страница отелей*/
 
 .hotels-filter {
   color: #ffffff;
-  background-color: #7a9cc0;
-  background-image: url("../img/backgrounds/background-filter.jpg");
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
+  background: #7a9cc0 url("../img/backgrounds/background-filter.jpg") no-repeat 50% 50%;
 }
 
 .hotels-filter ul {
@@ -206,14 +236,14 @@ a {
 }
 
 .cost-per-day input {
-  background: transparent;
-
   font-family: inherit;
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
   color: #ffffff;
-  border: 2px solid #ffffff;
+  background: transparent;
+  border: none;
+  outline: none;
 }
 
 .hotels-filter legend {
@@ -223,9 +253,11 @@ a {
 }
 
 .hotels-filter_show {
+  font-size: 14px;
+  line-height: 21px;
   font-weight: 400;
+  background-color: transparent;
   border: 2px solid #ffffff;
-
 }
 
 .hotels-filter_show:hover {
@@ -240,7 +272,7 @@ a {
 }
 
 .hotel-sorting_title-sort,
-.hotel-sorting_filter {
+.hotel-sorting_filter-by-type {
   font-size: 12px;
   line-height: 18px;
   font-weight: 400;
@@ -250,9 +282,9 @@ a {
   list-style: none;
 }
 
-.hotel-sorting_filter a {
+.hotel-sorting_filter-by-type a {
   color: #000000;
-  opacity: 0.3;
+  opacity: 0.4;
   border-bottom: 1px dotted #81b3d2;
 }
 
@@ -262,19 +294,19 @@ a {
   border-bottom: none;
 }
 
-.hotel-sorting_filter a:hover {
+.hotel-sorting_filter-by-type a:hover {
   color: #81b3d2;
   opacity: 1;
   border-bottom: 1px dotted #81b3d2;
 }
 
-.hotel-sorting_filter a:active {
+.hotel-sorting_filter-by-type a:active {
   color: #000000;
   opacity: 1;
   border-bottom: none;
 }
 
-.arrow-block_current-arrow svg,
+.hotel-sorting_current-arrow svg,
 .hotel-sorting svg:active {
   fill: #81b3d2;
 }
@@ -299,11 +331,14 @@ a {
 }
 
 .hotels_rating {
-  background-color: #f2f2f2;
   color: #666666;
+  background-color: #f2f2f2;
+
 }
 
 .detail-button {
+  font-size: 14px;
+  line-height: 21px;
   background-color: #81b3d2;
 }
 
@@ -312,11 +347,15 @@ a {
 }
 
 .detail-button:active {
-  background-color: #5496bd;
   color: rgba(255, 255, 255, 0.3);
+  background-color: #5496bd;
+
+  outline: none;
 }
 
 .reserv-button {
+  font-size: 14px;
+  line-height: 21px;
   background-color: #766357;
 }
 
@@ -325,6 +364,16 @@ a {
 }
 
 .reserv-button:active {
-  background-color: #503e33;
   color: rgba(255, 255, 255, 0.3);
+  background-color: #503e33;
+  outline: none;
 }
+
+.design svg:hover {
+  fill: #81b3d2;
+}
+
+.design svg:active {
+  fill: rgba(0, 0, 0, 0.3);
+}
+
