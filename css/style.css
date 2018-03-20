@@ -212,16 +212,16 @@ a {
   background-color: #81b3d2;
 }
 
-.social-button svg:hover,
-.social-button:hover
-{
+.social-button:hover {
   background-color: #669ec0;
 }
 
-.social-button svg:active,
 .social-button:active {
-  fill: #88b6d1;
   background-color: #5496bd;
+}
+
+.social-button:active > svg {
+  fill: #88b6d1;
 }
 
 /* Страница отелей*/
@@ -377,3 +377,173 @@ a {
   fill: rgba(0, 0, 0, 0.3);
 }
 
+/* Стили сетки*/
+
+.main-header {
+  min-height: 56px;
+}
+
+.main-navigation {
+  position: relative;
+  min-height: 56px;
+
+}
+
+.main-header_logo {
+  position: absolute;
+  width: 138px;
+  height: 70px;
+  left: 50%;
+  margin-left: -69px;
+}
+
+.main-header_menu {
+  margin: 0;
+  padding: 0 72px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 56px;
+  box-sizing: border-box;
+
+}
+
+.main-header_menu li {
+  width: 300px;
+}
+
+.main-header_menu li:first-child,
+.main-header_menu li:nth-child(2) {
+  text-align: left;
+}
+
+.main-header_menu li:nth-child(3),
+.main-header_menu li:last-child {
+  text-align: right;
+}
+
+.intro {
+  min-height: 512px;
+  text-align: center;
+}
+
+.intro_welcome-img {
+  margin-top: 76px;
+}
+
+.features_slogan,
+.features_reasons {
+  text-align: center;
+}
+
+.features_slogan {
+  margin-top: 60px;
+}
+
+.features_reasons {
+  margin-bottom: 36px;
+}
+
+.main-item {
+  display: flex;
+  justify-content: space-between;
+  min-height: 256px;
+  text-align: center;
+}
+
+.main-item_title {
+  margin-top: 46px;
+}
+
+.advice {
+  display: flex;
+  min-height: 330px;
+}
+
+.advice_list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.advice_list li {
+  text-align: center;
+}
+
+.main-item_text-area {
+  text-align: center;
+  width: 400px;
+}
+
+.features_secondary {
+  display: flex;
+  justify-content: space-around;
+  min-height: 256px;
+}
+
+.secondary-item {
+  width: 400px;
+  text-align: center;
+}
+
+.secondary-item_title {
+  margin-top: 46px;
+}
+
+.search-hotels {
+  position: relative;
+}
+
+.search-hotels_interest {
+  margin-top: 54px;
+  margin-bottom: 28px;
+}
+
+.search-hotels_open-form {
+  width: 568px;
+  height: 86px;
+  margin-top: 50px;
+}
+
+.search-hotels_form-box {
+  position: absolute;
+  box-sizing: border-box;
+  right: 316px;
+  width: 568px;
+  min-height: 395px;
+  background-color: #ffffff;
+}
+
+.main-footer {
+  padding: 48px 135px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-footer_social-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
+}
+
+.social-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 46px;
+  height: 48px;
+}
+
+.design > p {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.design > a {
+  display: inline-block;
+  vertical-align: middle;
+}
