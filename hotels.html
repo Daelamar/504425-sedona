@@ -34,8 +34,8 @@
   <main>
     <h1 class="visually-hidden">Поиск гостиниц Седоны</h1>
     <section class="hotels-filter">
-      <form method="post" action="http://echo.htmlacademy.ru">
-        <fieldset>
+      <form method="post" action="http://echo.htmlacademy.ru" class="hotels-filter_form">
+        <fieldset class="infrastructure">
           <legend>Инфраструктура:</legend>
           <ul>
             <li>
@@ -52,7 +52,7 @@
             </li>
           </ul>
         </fieldset>
-        <fieldset>
+        <fieldset class="property-type">
           <legend>Тип жилья:</legend>
           <ul>
             <li>
@@ -69,29 +69,31 @@
             </li>
           </ul>
         </fieldset>
-        <fieldset class="cost-per-day">
-          <legend>Стоимость в сутки (P):</legend>
-          <div>
+        <div>
+          <fieldset class="cost-per-day">
+            <legend>Стоимость в сутки (P):</legend>
+            <div>
           <span>
             <label for="filter-start-price">От</label>
             <input type="text" name="filter-start-price" id="filter-start-price" value="0" readonly>
           </span>
-            <span>
+              <span>
             <label for="filter-end-price">До</label>
             <input type="text" name="filter-end-price" id="filter-end-price" value="3000" readonly>
           </span>
-          </div>
-          <div>
-            <span tabindex="0" aria-label="Минимальная цена"></span>
-            <div></div>
-            <span tabindex="0" aria-label="Максимальная цена"></span>
-          </div>
-        </fieldset>
-        <button type="submit" class="btn hotels-filter_show">Показать</button>
+            </div>
+            <div>
+              <span tabindex="0" aria-label="Минимальная цена"></span>
+              <div class="prise-slider"></div>
+              <span tabindex="0" aria-label="Максимальная цена"></span>
+            </div>
+          </fieldset>
+          <button type="submit" class="btn hotels-filter_show">Показать</button>
+        </div>
       </form>
     </section>
-    <div class="hotel-sorting"> <!-- Сделал класс именно так,потому что фильтр есть уже выше, а тут именно сортировка/ Если это так критично-переделаю,просто там много в цсс править нужно будет -->
-      <p class="hotel-sorting_title">Найдено:3</p>
+    <div class="hotel-sorting">
+      <p class="hotel-sorting_title">Найдено: 3</p>
       <p class="hotel-sorting_title-sort">Сортировка:</p>
       <ul class="hotel-sorting_filter-by-type">
         <li class="hotel-sorting_current">
@@ -120,33 +122,51 @@
     <section class="hotels">
       <article class="hotels_item">
         <img src="img/hotels/amara.jpg" width="135" height="90" alt="Отель Amara Resort">
-        <a href="#"><h2 class="item_hotel-name">Amara Resort&amp;Spa</h2></a>
-        <p>Гостиница</p>
-        <span class="hotels_price">от 4000 р.</span>
-        <a href="#" class="btn detail-button">Подробнее</a>
-        <a href="#" class="btn reserv-button">Забронировать</a>
-        <span class="stars">Stars</span>
-        <span class="hotels_rating">Рейтинг: 8,5</span>
+        <div class="hotels_item_text-box">
+          <a href="#">
+            <h2 class="item_hotel-name">Amara Resort&amp;Spa</h2>
+          </a>
+          <p>Гостиница</p>
+          <span class="hotels_price">от 4000 р.</span>
+          <a href="#" class="btn detail-button">Подробнее</a>
+          <a href="#" class="btn reserv-button">Забронировать</a>
+        </div>
+        <div class="hotels_item_rating-box">
+          <span class="stars">Stars</span>
+          <span class="hotels_rating">Рейтинг: 8,5</span>
+        </div>
       </article>
       <article class="hotels_item">
         <img src="img/hotels/desert.jpg" width="135" height="90" alt="Мотель Desert Quail">
-        <a href="#"><h2 class="item_hotel-name">Desert Quail Inn</h2></a>
-        <p>Мотель</p>
-        <span class="hotels_price">от 3000 р.</span>
-        <a href="#" class=" btn detail-button">Подробнее</a>
-        <a href="#" class=" btn reserv-button">Забронировать</a>
-        <span class="stars">Stars</span>
-        <span class="hotels_rating">Рейтинг: 8,9</span>
+        <div class="hotels_item_text-box">
+          <a href="#">
+            <h2 class="item_hotel-name">Desert Quail Inn</h2>
+          </a>
+          <p>Мотель</p>
+          <span class="hotels_price">от 3000 р.</span>
+          <a href="#" class=" btn detail-button">Подробнее</a>
+          <a href="#" class=" btn reserv-button">Забронировать</a>
+        </div>
+        <div class="hotels_item_rating-box">
+          <span class="stars">Stars</span>
+          <span class="hotels_rating">Рейтинг: 8,9</span>
+        </div>
       </article>
       <article class="hotels_item">
         <img src="img/hotels/villas.jpg" width="135" height="90" alt="Апартаменты Villas At Poco">
-        <a href="#"><h2 class="item_hotel-name">Villas At Poco Diablo</h2></a>
-        <p>Апартаменты</p>
-        <span class="hotels_price">от 2000 р.</span>
-        <a href="#" class="btn detail-button">Подробнее</a>
-        <a href="#" class="btn reserv-button">Забронировать</a>
-        <span class="stars">Stars</span>
-        <span class="hotels_rating">Рейтинг: 9,2</span>
+        <div class="hotels_item_text-box">
+          <a href="#">
+            <h2 class="item_hotel-name">Villas At Poco Diablo</h2>
+          </a>
+          <p>Апартаменты</p>
+          <span class="hotels_price">от 2000 р.</span>
+          <a href="#" class="btn detail-button">Подробнее</a>
+          <a href="#" class="btn reserv-button">Забронировать</a>
+        </div>
+        <div class="hotels_item_rating-box">
+          <span class="stars">Stars</span>
+          <span class="hotels_rating">Рейтинг: 9,2</span>
+        </div>
       </article>
     </section>
   </main>
@@ -181,7 +201,7 @@
       </li>
     </ul>
     <div class="design">
-      <p>Website by</p>
+      <p>Website by </p>
       <a target="_blank" href="https://htmlacademy.ru/intensive/htmlcss" class="main-footer_logo">
         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="115" height="41" fill="#231f20"
              viewBox="0 0 113 39">

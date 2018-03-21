@@ -547,3 +547,91 @@ a {
   display: inline-block;
   vertical-align: middle;
 }
+
+/*Сетка страницы отелей*/
+.hotels-filter_form {
+  padding: 28px 72px 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.hotels-filter_form fieldset {
+  border: none;
+}
+
+.hotels-filter_form legend {
+  margin-bottom: 26px;
+}
+
+.hotels-filter_form ul {
+  margin: 0;
+  padding: 0;
+}
+
+.hotels-filter_form li:first-child,
+.hotels-filter_form li:nth-child(2) {
+  margin-bottom: 26px;
+}
+
+.property-type {
+  margin-right: auto;
+}
+
+.infrastructure {
+  margin-right: 100px;
+}
+
+.prise-slider {
+  width: 316px;
+  border: 1px solid #ffffff;
+}
+
+.hotels-filter_show {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hotel-sorting {
+  padding: 11px 72px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.hotel-sorting_filter-by-type {
+  margin: 0 auto 0 0;
+  padding: 0;
+  display: flex;
+}
+
+.hotel-sorting_title {
+  margin-right: 50px;
+}
+
+.hotel-sorting_filter-by-type li:first-child {
+  margin-left: 40px;
+}
+
+.hotel-sorting_filter-by-type li:nth-child(2),
+.hotel-sorting_filter-by-type li:nth-child(3) {
+  margin-left: 32px;
+}
+
+.hotels_item {
+  padding: 30px 72px;
+  display: flex;
+  justify-content: space-between;
+
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.hotels_item_text-box {
+  margin: 0 auto 0 30px;
+}
+.item_hotel-name{
+  margin: 0;
+}
