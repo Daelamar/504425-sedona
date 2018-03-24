@@ -181,18 +181,39 @@ a {
 }
 
 .main-item_text-area {
-  padding: 28px 60px;
+  padding: 44px 48px;
   text-align: center;
   justify-content: center;
 }
 
 .main-item_title {
-  margin-bottom: 23px;
+  margin: 2px auto 25px;
+  width: 160px;
 }
 
-.main-item_text-area span {
-  display: inline-block;
-  margin-bottom: 8px;
+.number-of-reason {
+  margin: 0 auto 21px;
+  display: flex;
+  width: 52px;
+  align-items: center;
+
+}
+
+.number-of-reason:before,
+.number-of-reason:after {
+  content: "";
+  width: 9px;
+  height: 1px;
+
+  background-color: #ffffff;
+}
+
+.number-of-reason:before {
+  margin-right: 6px;
+}
+
+.number-of-reason:after {
+  margin-left: 6px;
 }
 
 .advice {
@@ -207,12 +228,13 @@ a {
 }
 
 .advice_list li {
-  width: calc(100%/3);
-  padding: 135px 60px 63px;
+  width: calc(100% / 3);
+  padding: 135px 58px 67px;
   position: relative;
   text-align: center;
 }
-.advice_list li:first-child::after {
+
+.advice_list_quarters::after {
   content: "";
   position: absolute;
   width: 75px;
@@ -223,16 +245,6 @@ a {
   transform: translateX(-50%);
 }
 
-.advice_list_quarters::after {
-  content: "";
-  position: absolute;
-  width: 75px;
-  height: 72px;
-  background: url("../img/icons/icon-burger.svg") no-repeat;
-  left: 50%;
-  top: 60px;
-  transform: translateX(-50%);
-}
 .advice_list_food::after {
   content: "";
   position: absolute;
@@ -243,6 +255,7 @@ a {
   top: 62px;
   transform: translateX(-51%);
 }
+
 .advice_list_souvenir::after {
   content: "";
   position: absolute;
@@ -253,28 +266,46 @@ a {
   top: 58px;
   transform: translateX(-50%);
 }
+
+.advice_list_title {
+  margin-bottom: 24px;
+}
+
 .features_secondary {
   display: flex;
   background-color: #eeeeee;
 }
 
-.secondary-item {
+.features_secondary .number-of-reason:after,
+.features_secondary .number-of-reason:before {
+  background-color: #333333;
+}
 
+.secondary-item {
+  width: calc(100% / 3);
+  padding: 0 68px 45px;
   text-align: center;
 }
 
 .secondary-item_title {
-  margin-top: 46px;
+  margin: 46px auto 24px;
+  width: 130px;
+}
+
+.secondary-item span {
+  display: inline-block;
+  margin-bottom: 8px;
 }
 
 .search-hotels {
+  padding: 0 316px;
   position: relative;
   text-align: center;
 }
 
 .search-hotels_interest {
-  margin-top: 54px;
-  margin-bottom: 28px;
+  margin-top: 56px;
+  margin-bottom: 31px;
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
@@ -283,10 +314,11 @@ a {
 .search-hotels_open-form {
   width: 568px;
   height: 86px;
-  margin-top: 50px;
+  margin-top: 33px;
 }
 
 .search-hotels_form-box {
+  padding: 55px 57px;
   position: absolute;
   box-sizing: border-box;
   right: 316px;
@@ -299,7 +331,22 @@ a {
   line-height: 24px;
 }
 
+.search-hotels_field,
+.search-hotels_people {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-hotels_field {
+  margin-bottom: 28px;
+  position: relative;
+}
+
 .calendar {
+  top: 7px;
+  right: 2px;
+  position: absolute;
   background-color: transparent;
 }
 
@@ -310,13 +357,37 @@ a {
 }
 
 .search-hotels label {
+  line-height: 26px;
   font-weight: 700;
 }
 
 .search-hotels input {
+  padding: 10px 30px 10px 14px;
+  width: 346px;
+  height: 38px;
+  box-sizing: border-box;
   font-weight: 700;
+  text-transform: uppercase;
   border: 2px solid #f2f2f2;
   outline: none;
+}
+
+.search-hotels_people input {
+  padding: 10px 5px;
+  width: 38px;
+  text-align: center;
+
+}
+
+.adults,
+.children {
+  display: flex;
+  align-items: center;
+  width: 50%;
+}
+
+.search-hotels input::placeholder {
+  color: #000000;
 }
 
 .search-hotels input:hover {
@@ -356,7 +427,12 @@ a {
 .search-hotels .calendar:active svg {
   fill: #81b3d2;
 }
-
+.plus{
+  width: 38px;
+  height: 38px;
+  background-image: url('../img/icons/css_sprites.png');
+  background-position: 6px 6px;
+}
 .search-hotels_find {
   font-size: 21px;
   line-height: 26px;
@@ -373,17 +449,27 @@ a {
   outline: none;
 }
 
-.visitsedona-link {
+.map {
+  margin-bottom: -122px;
+}
+
+.main-footer {
+  padding: 36px 100px 36px 132px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  opacity: 0.9;
+  background-color: rgba(253, 253, 253, 0.8);
+
+}
+
+.visit-sedona {
+  display: block;
+  width: calc(100% / 3);
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
   color: #000000;
-}
-
-.main-footer {
-  padding: 48px 135px;
-  display: flex;
-  justify-content: space-between;
 }
 
 .main-footer ul {
@@ -392,28 +478,36 @@ a {
 
 .main-footer_social-list {
   margin: 0;
-  padding: 0;
+  padding: 0 31px 0 0;
   display: flex;
-  justify-content: space-between;
-  width: 150px;
+  width: calc(100% / 3);
+  justify-content: center;
 }
 
 .social-button {
   display: flex;
+  margin: 0 3px;
   justify-content: center;
   align-items: center;
   width: 46px;
   height: 48px;
 }
 
+.design {
+  display: flex;
+  justify-content: flex-end;
+  width: calc(100% / 3);
+  text-align: right;
+  align-items: center;
+}
+
 .design > p {
-  display: inline-block;
-  vertical-align: middle;
+  display: block;
 }
 
 .design > a {
-  display: inline-block;
-  vertical-align: middle;
+  display: block;
+  margin-left: 9px;
 }
 
 .design .main-footer_logo:hover svg {
@@ -445,6 +539,7 @@ a {
 .hotels-filter {
   color: #ffffff;
   background: #7a9cc0 url("../img/backgrounds/background-filter.jpg") no-repeat 50% 50%;
+  background-size: 100vw auto;
 }
 
 .hotels-filter ul {
