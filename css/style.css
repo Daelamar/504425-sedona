@@ -229,7 +229,7 @@ a {
 
 .advice_list li {
   width: calc(100% / 3);
-  padding: 135px 58px 67px;
+  padding: 135px 57px 67px;
   position: relative;
   text-align: center;
 }
@@ -318,13 +318,14 @@ a {
 }
 
 .search-hotels_form-box {
-  padding: 55px 57px;
+  padding: 55px 56px;
   position: absolute;
   box-sizing: border-box;
   right: 316px;
   width: 568px;
-  min-height: 395px;
+
   background-color: #ffffff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
 }
 
 .search-hotels p {
@@ -339,7 +340,7 @@ a {
 }
 
 .search-hotels_field {
-  margin-bottom: 28px;
+  margin-bottom: 30px;
   position: relative;
 }
 
@@ -362,7 +363,7 @@ a {
 }
 
 .search-hotels input {
-  padding: 10px 30px 10px 14px;
+  padding: 10px 30px 10px 13px;
   width: 346px;
   height: 38px;
   box-sizing: border-box;
@@ -376,18 +377,6 @@ a {
   padding: 10px 5px;
   width: 38px;
   text-align: center;
-
-}
-
-.adults,
-.children {
-  display: flex;
-  align-items: center;
-  width: 50%;
-}
-
-.search-hotels input::placeholder {
-  color: #000000;
 }
 
 .search-hotels input:hover {
@@ -416,8 +405,10 @@ a {
   outline: none;
 }
 
-.search-hotels .calendar:hover svg {
+.search-hotels .calendar:hover svg,
+.search-hotels .calendar:focus svg {
   fill: #000000;
+
 }
 
 .search-hotels .calendar:focus {
@@ -427,13 +418,70 @@ a {
 .search-hotels .calendar:active svg {
   fill: #81b3d2;
 }
-.plus{
+
+.adults,
+.children {
+  display: flex;
+  align-items: center;
+  width: 50%;
+}
+
+.adults {
+  justify-content: flex-start;
+}
+
+.children {
+  justify-content: flex-end;
+}
+
+.adults .minus {
+  margin-left: 38px;
+}
+
+.children .minus {
+  margin-left: 26px;
+}
+
+.plus,
+.minus {
   width: 38px;
   height: 38px;
-  background-image: url('../img/icons/css_sprites.png');
-  background-position: 6px 6px;
 }
+
+.plus {
+  background-image: url('../img/icons/css_sprites.png');
+  background-position: 3px 106px;
+}
+
+.minus {
+  background-image: url('../img/icons/css_sprites.png');
+  background-position: 3px 5px;
+}
+
+.minus:hover {
+  background-position: 3px -49px;
+  outline: none;
+}
+
+.minus:active {
+  background-position: 3px -22px;
+  outline: none;
+}
+
+.plus:hover {
+  background-position: 3px 36px;
+  outline: none;
+}
+
+.plus:active {
+  background-position: 3px 71px;
+  outline: none;
+}
+
 .search-hotels_find {
+  margin-top: 54px;
+  width: 100%;
+  height: 58px;
   font-size: 21px;
   line-height: 26px;
   background-color: #81b3d2;
@@ -454,7 +502,7 @@ a {
 }
 
 .main-footer {
-  padding: 36px 100px 36px 132px;
+  padding: 36px 0;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -464,8 +512,9 @@ a {
 }
 
 .visit-sedona {
-  display: block;
   width: calc(100% / 3);
+  display: flex;
+  justify-content: center;
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
@@ -473,12 +522,12 @@ a {
 }
 
 .main-footer ul {
+  padding: 0;
   list-style: none;
 }
 
 .main-footer_social-list {
   margin: 0;
-  padding: 0 31px 0 0;
   display: flex;
   width: calc(100% / 3);
   justify-content: center;
@@ -495,9 +544,8 @@ a {
 
 .design {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   width: calc(100% / 3);
-  text-align: right;
   align-items: center;
 }
 
