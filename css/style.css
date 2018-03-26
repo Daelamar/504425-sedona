@@ -641,8 +641,8 @@ a {
   margin-bottom: 25px;
 }
 
-.checkbox-indicator {
-
+.hotels-filter_list label:focus {
+  outline: auto;
 }
 
 .hotels-filter input[type="checkbox"] + .checkbox-indicator {
@@ -656,6 +656,11 @@ a {
 
 .hotels-filter input[type="checkbox"]:checked + .checkbox-indicator {
   background: url("../img/icons/checkbox-on.svg") no-repeat;
+}
+
+.hotels-filter input[type="checkbox"]:focus + .checkbox-indicator {
+  outline: 2px solid rgba(255 ,255,255,0.6);
+
 }
 
 .filter_slider {
@@ -754,10 +759,7 @@ a {
 }
 
 .range-toggle:hover {
-  top: -10px;
-  width: 22px;
-  height: 22px;
-  border: 9px solid #ffffff;
+  box-shadow: 0 0 0 2px #ffffff;
 }
 
 .hotels-filter legend {
