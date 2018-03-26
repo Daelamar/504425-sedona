@@ -593,7 +593,7 @@ a {
 }
 
 .hotels-filter_form {
-  padding: 28px 72px 16px;
+  padding: 28px 71px 16px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -607,6 +607,10 @@ a {
   margin-bottom: 26px;
 }
 
+.hotels-filter label {
+  cursor: pointer;
+}
+
 .hotels-filter_form ul {
   margin: 0;
   padding: 0;
@@ -617,7 +621,17 @@ a {
   margin-bottom: 26px;
 }
 
+.filter_slider {
+  width: 320px;
+}
+
+.cost-per-day {
+  padding: 0;
+}
+
 .cost-per-day input {
+  margin: 0;
+  width: 60px;
   font-family: inherit;
   font-size: 14px;
   line-height: 21px;
@@ -626,6 +640,87 @@ a {
   background: transparent;
   border: none;
   outline: none;
+}
+
+.cost-per-day legend {
+  margin-bottom: 10px;
+}
+
+.filter_price-control {
+  padding: 5px 0;
+  margin-bottom: 20px;
+  position: relative;
+  height: 36px;
+  font-size: 0;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+}
+
+.filter_price-control::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 2px;
+  height: 22px;
+  background: #ffffff;
+}
+
+.filter_price-control label {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.filter_slider .filter-start-price,
+.filter_slider .filter-end-price {
+  padding-left: 65px;
+  width: 90px;
+
+}
+
+.filter_slider-control {
+  margin-bottom: 32px;
+  position: relative;
+}
+
+.scale {
+  height: 2px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.scale-bar {
+  width: 80%;
+  height: 2px;
+  background: #ffffff;
+}
+
+.range-toggle {
+  position: absolute;
+  top: -9px;
+  width: 20px;
+  height: 20px;
+  background: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  cursor: pointer;
+}
+
+.range-toggle-min {
+  left: 0;
+}
+
+.range-toggle-max {
+  left: 80%;
+}
+
+.range-toggle:hover {
+  top: -10px;
+  width: 22px;
+  height: 22px;
+  border: 9px solid #ffffff;
 }
 
 .hotels-filter legend {
@@ -640,17 +735,6 @@ a {
 
 .infrastructure {
   margin-right: 100px;
-}
-
-.prise-slider {
-  width: 316px;
-  border: 1px solid #ffffff;
-}
-
-.hotels-filter_show {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .hotel-sorting {
@@ -682,11 +766,16 @@ a {
 }
 
 .hotels-filter_show {
+  display: block;
+  margin: 0 auto;
+  padding: 6px 34px;
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
   background-color: transparent;
   border: 2px solid #ffffff;
+  border-radius: 2px;
+  cursor: pointer;
 }
 
 .hotels-filter_show:hover {
@@ -745,7 +834,7 @@ a {
 }
 
 .hotels_item {
-  padding: 27px 72px;
+  padding: 30px 72px;
   display: flex;
   justify-content: space-between;
 
@@ -773,6 +862,7 @@ a {
 }
 
 .hotels_item_wrapper {
+  margin-top: 4px;
   display: flex;
 }
 
@@ -788,11 +878,25 @@ a {
   margin: 0;
   padding: 2px 0 4px;
 }
-.hotels_price{
+
+.hotels_type p,
+.hotels_price p {
+  margin: 0;
+}
+
+.hotels_type,
+.hotels_price {
+  display: flex;
+  flex-direction: column;
+}
+
+.hotels_price {
   margin-left: 6px;
 }
+
 .detail-button {
-  padding:3px 17px ;
+  margin-top: 12px;
+  padding: 3px 17px;
   font-size: 14px;
   line-height: 21px;
   background-color: #81b3d2;
@@ -810,6 +914,7 @@ a {
 }
 
 .reserv-button {
+  margin-top: 12px;
   padding: 3px 16px;
   font-size: 14px;
   line-height: 21px;
@@ -833,19 +938,26 @@ a {
   align-items: flex-end;
 }
 
-.stars {
+.stars span {
+  display: inline-block;
+  width: 18px;
   height: 18px;
-  background: url("../img/icons/star.svg") repeat-x;
+  background: url("../img/icons/star.svg");
 }
 
-.stars-four {
-  width: 72px;
+.stars {
+  display: flex;
+  justify-content: space-between;
 }
 
-.stars-three {
-  width: 54px;
+.four-star {
+  width: 90px;
 }
 
-.stars-two {
-  width: 36px;
+.three-star {
+  width: 66px;
+}
+
+.two-star {
+  width: 42px;
 }

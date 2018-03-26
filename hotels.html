@@ -69,23 +69,21 @@
             </li>
           </ul>
         </fieldset>
-        <div>
+        <div class="filter_slider">
           <fieldset class="cost-per-day">
             <legend>Стоимость в сутки (P):</legend>
-            <div>
-              <div>
-                <label for="filter-start-price">От</label>
-                <input type="text" name="filter-start-price" id="filter-start-price" value="0" readonly>
-              </div>
-              <div>
-                <label for="filter-end-price">До</label>
-                <input type="text" name="filter-end-price" id="filter-end-price" value="3000" readonly>
-              </div>
+            <div class="filter_price-control">
+              <label for="filter-start-price" class="filter-start-price">От</label>
+              <input type="text" name="filter-start-price" id="filter-start-price" value="0" readonly>
+              <label for="filter-end-price" class="filter-end-price">До</label>
+              <input type="text" name="filter-end-price" id="filter-end-price" value="3000" readonly>
             </div>
-            <div>
-              <span tabindex="0" aria-label="Минимальная цена"></span>
-              <div class="prise-slider"></div>
-              <span tabindex="0" aria-label="Максимальная цена"></span>
+            <div class="filter_slider-control">
+              <div class="scale">
+                <div class="scale-bar"></div>
+              </div>
+              <div class="range-toggle range-toggle-min"></div>
+              <div class="range-toggle range-toggle-max"></div>
             </div>
           </fieldset>
           <button type="submit" class="btn hotels-filter_show">Показать</button>
@@ -138,7 +136,12 @@
           </div>
         </div>
         <div class="hotels_item_rating-box">
-          <div class="stars stars-four"></div>
+          <div class="stars four-star">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
           <div class="hotels_rating"><p> Рейтинг: 8,5</p></div>
         </div>
       </article>
@@ -160,12 +163,17 @@
           </div>
         </div>
         <div class="hotels_item_rating-box">
-          <div class="stars stars-three"></div>
+          <div class="stars three-star">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
           <div class="hotels_rating"><p>Рейтинг: 8,9</p></div>
         </div>
       </article>
       <article class="hotels_item">
-        <img src="img/hotels/villas.jpg" width="135" height="90" alt="Апартаменты Villas At Poco">
+        <img src="img/hotels/villas.jpg" width="135" height="90" alt="Апартаменты Villas At Poco"
+             class="hotels_item_img">
         <div class="hotels_item_text-box">
           <a href="#">
             <h2 class="item_hotel-name">Villas At Poco Diablo</h2>
@@ -182,7 +190,10 @@
           </div>
         </div>
         <div class="hotels_item_rating-box">
-          <div class="stars stars-two"></div>
+          <div class="stars two-star">
+            <span></span>
+            <span></span>
+          </div>
           <div class="hotels_rating"><p>Рейтинг: 9,2</p></div>
         </div>
       </article>
