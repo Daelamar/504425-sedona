@@ -330,6 +330,7 @@ a {
 }
 
 .search-hotels_form-box {
+  display: block;
   padding: 55px 56px;
   position: absolute;
   right: 316px;
@@ -339,6 +340,10 @@ a {
 
   background-color: #ffffff;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+}
+
+.opened_hide-show {
+  display: none;
 }
 
 .search-hotels p {
@@ -659,7 +664,7 @@ a {
 }
 
 .hotels-filter input[type="checkbox"]:focus + .checkbox-indicator {
-  outline: 2px solid rgba(255 ,255,255,0.6);
+  outline: 2px solid rgba(255, 255, 255, 0.6);
 
 }
 
@@ -718,7 +723,7 @@ a {
 .filter_slider .filter-start-price,
 .filter_slider .filter-end-price {
   padding-left: 65px;
-  width: 90px;
+  width: 87px;
 
 }
 
@@ -777,7 +782,7 @@ a {
 }
 
 .hotel-sorting {
-  padding: 8px 72px;
+  padding: 8px 72px 10px;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
@@ -792,7 +797,7 @@ a {
 }
 
 .hotel-sorting_title {
-  margin-right: 50px;
+  margin-right: 48px;
 }
 
 .hotel-sorting_filter-by-type li:first-child {
@@ -806,7 +811,7 @@ a {
 
 .hotels-filter_show {
   display: block;
-  margin: 0 auto;
+  margin-left: 85px;
   padding: 6px 34px;
   font-size: 14px;
   line-height: 21px;
@@ -872,12 +877,21 @@ a {
   fill: #81b3d2;
 }
 
+.hotel-sorting_arrows a:last-child {
+  margin-left: 10px;
+
+}
+
 .hotels_item {
-  padding: 30px 72px;
+  padding: 27px 72px 30px;
   display: flex;
   justify-content: space-between;
 
   border-bottom: 1px solid #e5e5e5;
+}
+
+.hotels_item_img {
+  margin-top: 3px;
 }
 
 .hotels_item_text-box {
@@ -906,8 +920,6 @@ a {
 }
 
 .hotels_rating {
-  width: 110px;
-  height: 24px;
   text-align: center;
   color: #666666;
   background-color: #f2f2f2;
@@ -915,7 +927,7 @@ a {
 
 .hotels_rating > p {
   margin: 0;
-  padding: 2px 0 4px;
+  padding: 4px 13px 4px 16px;
 }
 
 .hotels_type p,
@@ -934,7 +946,7 @@ a {
 }
 
 .detail-button {
-  margin-top: 12px;
+  margin-top: 15px;
   padding: 3px 17px;
   font-size: 14px;
   line-height: 21px;
@@ -953,7 +965,7 @@ a {
 }
 
 .reserv-button {
-  margin-top: 12px;
+  margin-top: 15px;
   padding: 3px 16px;
   font-size: 14px;
   line-height: 21px;
