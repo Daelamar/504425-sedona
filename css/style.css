@@ -238,7 +238,7 @@ a {
   transform: translateX(-50%);
   width: 75px;
   height: 72px;
-  background: url("../img/icons/icon-home.svg") no-repeat;
+  background: url("../img/icons/icon_home.svg") no-repeat;
 
 }
 
@@ -250,7 +250,7 @@ a {
   transform: translateX(-51%);
   width: 74px;
   height: 70px;
-  background: url("../img/icons/icon-burger.svg") no-repeat;
+  background: url("../img/icons/icon_burger.svg") no-repeat;
 
 }
 
@@ -262,7 +262,7 @@ a {
   transform: translateX(-50%);
   width: 64px;
   height: 76px;
-  background: url("../img/icons/icon-box.svg") no-repeat;
+  background: url("../img/icons/icon_box.svg") no-repeat;
 
 }
 
@@ -603,7 +603,7 @@ a {
 .hotels-filter {
   margin-top: 2px;
   color: #ffffff;
-  background: #7a9cc0 url("../img/backgrounds/background-filter.jpg") no-repeat 50% 50%;
+  background: #7a9cc0 url("../img/backgrounds/background_filter.jpg") no-repeat 50% 50%;
   background-size: 100vw auto;
 }
 
@@ -656,16 +656,19 @@ a {
   left: -40px;
   width: 27px;
   height: 23px;
-  background: url("../img/icons/checkbox-off.svg") no-repeat;
+  background: url("../img/icons/checkbox_off.svg") no-repeat;
 }
 
 .hotels-filter input[type="checkbox"]:checked + .checkbox-indicator {
-  background: url("../img/icons/checkbox-on.svg") no-repeat;
+  background: url("../img/icons/checkbox_on.svg") no-repeat;
 }
 
-.hotels-filter input[type="checkbox"]:focus + .checkbox-indicator {
-  outline: 2px solid rgba(255, 255, 255, 0.6);
+.hotels-filter input[type="checkbox"]:disabled:checked + .checkbox-indicator {
+  background: url("../img/icons/checkbox_on_disabled.svg") no-repeat;
+}
 
+.hotels-filter input[type="checkbox"]:disabled + .checkbox-indicator {
+  background: url("../img/icons/checkbox_off_disabled.svg") no-repeat;
 }
 
 .filter_slider {
