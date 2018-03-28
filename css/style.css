@@ -323,7 +323,8 @@ a {
   background-color: #604e43;
 }
 
-.search-hotels_open-form:active {
+.search-hotels_open-form:active,
+.search-hotels_open-form:focus {
   color: rgba(255, 255, 255, 0.3);
   background-color: #503e33;
   outline: none;
@@ -340,10 +341,17 @@ a {
 
   background-color: #ffffff;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+
+  opacity: 1;
+  visibility: visible;
+  transition: opacity .7s, visibility .7s linear .7s;
+
 }
 
 .opened_hide-show {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
+
 }
 
 .search-hotels p {
@@ -825,9 +833,11 @@ a {
   cursor: pointer;
 }
 
+.hotels-filter_show:focus,
 .hotels-filter_show:hover {
   background-color: #ffffff;
   color: #000000;
+  outline: none;
 }
 
 .hotel-sorting_title {
