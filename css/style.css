@@ -1,8 +1,10 @@
 html {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 *, *::before, *::after {
+  -webkit-box-sizing: inherit;
   box-sizing: inherit;
 }
 
@@ -29,6 +31,7 @@ a {
   width: 1200px;
 
   background-color: #ffffff;
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
 }
 
@@ -79,10 +82,20 @@ a {
 .main-header_menu {
   margin: 0;
   padding: 14px 72px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -121,8 +134,12 @@ a {
 
 .intro {
   padding: 76px 0 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   position: relative;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   background: #81b3d2 url("../img/backgrounds/background.jpg") no-repeat;
   background-size: cover;
@@ -173,7 +190,11 @@ a {
 }
 
 .main-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   color: #ffffff;
   background-color: #81b3d2;
@@ -182,6 +203,8 @@ a {
 .main-item_text-area {
   padding: 44px 48px;
   text-align: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
@@ -192,8 +215,12 @@ a {
 
 .number-of-reason {
   margin: 0 auto 21px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 52px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 
 }
@@ -218,7 +245,11 @@ a {
 .advice_list {
   margin: 0;
   padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
@@ -235,6 +266,8 @@ a {
   position: absolute;
   left: 50%;
   top: 60px;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
   transform: translateX(-50%);
   width: 75px;
   height: 72px;
@@ -247,6 +280,8 @@ a {
   position: absolute;
   left: 50%;
   top: 62px;
+  -webkit-transform: translateX(-51%);
+  -ms-transform: translateX(-51%);
   transform: translateX(-51%);
   width: 74px;
   height: 70px;
@@ -259,6 +294,8 @@ a {
   position: absolute;
   left: 50%;
   top: 58px;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
   transform: translateX(-50%);
   width: 64px;
   height: 76px;
@@ -271,6 +308,8 @@ a {
 }
 
 .features_secondary {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   background-color: #eeeeee;
 }
@@ -319,12 +358,13 @@ a {
   background-color: #766357;
 }
 
-.search-hotels_open-form:hover {
+.search-hotels_open-form:hover,
+.search-hotels_open-form:focus {
   background-color: #604e43;
+  outline: none;
 }
 
-.search-hotels_open-form:active,
-.search-hotels_open-form:focus {
+.search-hotels_open-form:active {
   color: rgba(255, 255, 255, 0.3);
   background-color: #503e33;
   outline: none;
@@ -335,23 +375,27 @@ a {
   padding: 55px 56px;
   position: absolute;
   right: 316px;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: 568px;
   z-index: 2;
 
   background-color: #ffffff;
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
 
   opacity: 1;
-  visibility: visible;
-  transition: opacity .7s, visibility .7s linear .7s;
+  max-height: 475px;
+  -webkit-transition: opacity .3s, linear .3s;
+  -o-transition: opacity .3s, linear .3s;
+  transition: opacity .3s, linear .3s;
 
 }
 
 .opened_hide-show {
   opacity: 0;
-  visibility: hidden;
-
+  max-height: 0;
+  overflow: hidden;
 }
 
 .search-hotels p {
@@ -360,14 +404,24 @@ a {
 
 .search-hotels_field,
 .search-hotels_people {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
 .search-hotels_field {
   margin-bottom: 30px;
   position: relative;
+}
+
+.search-hotels_field input {
+  margin-left: auto;
 }
 
 .calendar {
@@ -392,6 +446,7 @@ a {
   padding: 10px 30px 10px 13px;
   width: 346px;
   height: 38px;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-weight: 700;
   text-transform: uppercase;
@@ -431,16 +486,24 @@ a {
 
 .adults,
 .children {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   width: 50%;
 }
 
 .adults {
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
   justify-content: flex-start;
 }
 
 .children {
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
   justify-content: flex-end;
 }
 
@@ -490,18 +553,6 @@ a {
   outline: none;
 }
 
-/*
-.search-hotels .calendar:hover svg,
-.search-hotels .calendar:focus svg {
-  fill: #000000;
-
-}
-
-.search-hotels .calendar:focus {
-  outline: none;
-}
-
- */
 .search-hotels_find {
   margin-top: 54px;
   padding: 16px 0;
@@ -511,8 +562,10 @@ a {
   background-color: #81b3d2;
 }
 
-.search-hotels_find:hover {
+.search-hotels_find:hover,
+.search-hotels_find:focus {
   background-color: #669ec0;
+  outline: none;
 }
 
 .search-hotels_find:active {
@@ -526,18 +579,32 @@ a {
   margin-bottom: -122px;
 }
 
+.map > iframe {
+  border: none;
+}
+
 .main-footer {
   position: relative;
   padding: 36px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
   justify-content: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   background-color: rgba(255, 255, 255, 0.8);
 }
 
 .visit-sedona {
   width: calc(100% / 3);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   font-size: 21px;
   line-height: 26px;
@@ -552,24 +619,40 @@ a {
 
 .main-footer_social-list {
   margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: calc(100% / 3);
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
 .social-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin: 0 3px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   width: 46px;
   height: 48px;
 }
 
 .design {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   width: calc(100% / 3);
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -582,12 +665,14 @@ a {
   margin-left: 9px;
 }
 
-.design .main-footer_logo:hover svg {
+.main-footer_logo:hover svg {
   fill: #81b3d2;
 }
 
-.design .main-footer_logo:active svg {
-  fill: rgba(0, 0, 0, 0.3);
+.main-footer_logo:active svg,
+.main-footer_logo svg:active {
+  fill: #231f20;
+  opacity: 0.3;
 }
 
 .social-button {
@@ -602,7 +687,8 @@ a {
   background-color: #5496bd;
 }
 
-.social-button:active svg {
+.social-button:active svg,
+.social-button svg:active {
   fill: #88b6d1;
 }
 
@@ -621,8 +707,15 @@ a {
 
 .hotels-filter_form {
   padding: 28px 71px 29px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
@@ -719,6 +812,8 @@ a {
   position: absolute;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   width: 2px;
   height: 22px;
@@ -762,6 +857,7 @@ a {
   background: #ababab;
   border: 8px solid #ffffff;
   border-radius: 50%;
+  -webkit-box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
   box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
   cursor: pointer;
 }
@@ -775,6 +871,7 @@ a {
 }
 
 .range-toggle:hover {
+  -webkit-box-shadow: 0 0 0 2px #ffffff;
   box-shadow: 0 0 0 2px #ffffff;
 }
 
@@ -794,8 +891,14 @@ a {
 
 .hotel-sorting {
   padding: 8px 72px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
   align-items: baseline;
 
   border-bottom: 1px solid #e5e5e5;
@@ -804,6 +907,8 @@ a {
 .hotel-sorting_filter-by-type {
   margin: 0 auto 0 0;
   padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -897,7 +1002,11 @@ a {
 
 .hotels_item {
   padding: 27px 72px 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 
   border-bottom: 1px solid #e5e5e5;
@@ -929,6 +1038,8 @@ a {
 
 .hotels_item_wrapper {
   margin-top: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -950,7 +1061,12 @@ a {
 
 .hotels_type,
 .hotels_price {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
 }
 
@@ -996,9 +1112,18 @@ a {
 }
 
 .hotels_item_rating-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
   align-items: flex-end;
 }
 
@@ -1010,7 +1135,11 @@ a {
 }
 
 .stars {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
