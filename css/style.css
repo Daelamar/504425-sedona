@@ -369,14 +369,65 @@ a {
 
 .opened_hide-show {
   opacity: 0;
-  min-height: 0;
+  max-height: 0;
   overflow: hidden;
 }
 
 .search-hotels p {
   line-height: 24px;
 }
+@-webkit-keyframes error {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
 
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+}
+@keyframes error {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+}
+.search-hotels_error {
+  -webkit-animation: error 0.6s;
+  animation: error 0.6s;
+}
 .search-hotels_field,
 .search-hotels_people {
   display: -webkit-box;

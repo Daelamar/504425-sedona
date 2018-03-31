@@ -1,4 +1,1 @@
-var buttonForOpenForm = document.getElementById("open-form"), popup = document.querySelector(".search-hotels_form-box");
-popup.classList.add("opened_hide-show"), buttonForOpenForm.addEventListener("click", function (e) {
-  e.preventDefault(), popup.classList.toggle("opened_hide-show")
-});
+var buttonForOpenForm=document.getElementById("open-form"),popup=document.querySelector(".search-hotels_form-box"),form=popup.querySelector("form"),dateOfArrival=popup.querySelector("[name=search-arrival]"),dateOfDeparture=popup.querySelector("[name=search-departure]"),quantityAdults=popup.querySelector("[name=search-adults]"),quantityChildren=popup.querySelector("[search-adults]");popup.classList.add("opened_hide-show"),popup.classList.remove("search-hotels_error"),buttonForOpenForm.addEventListener("click",function(e){e.preventDefault(),popup.classList.toggle("opened_hide-show"),popup.classList.remove("search-hotels_error")}),form.addEventListener("submit",function(e){dateOfArrival.value&&dateOfDeparture.value&&quantityAdults.value&&quantityChildren.value||(e.preventDefault(),popup.classList.add("search-hotels_error"))});
